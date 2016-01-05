@@ -18,8 +18,9 @@
 		F572A6D11C39269900BA6418 /* WatchDataTransfer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F572A6D01C39269900BA6418 /* WatchDataTransfer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F572A6D61C39269900BA6418 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F572A6D51C39269900BA6418 /* InterfaceController.swift */; };
 		F572A6D81C39269900BA6418 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F572A6D71C39269900BA6418 /* ExtensionDelegate.swift */; };
-		F572A6DA1C39269900BA6418 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F572A6D91C39269900BA6418 /* GlanceController.swift */; };
 		F572A6DC1C39269900BA6418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F572A6DB1C39269900BA6418 /* Assets.xcassets */; };
+		F572A6ED1C39280800BA6418 /* RandomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F572A6EC1C39280800BA6418 /* RandomData.swift */; };
+		F572A6EE1C392E0300BA6418 /* RandomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F572A6EC1C39280800BA6418 /* RandomData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,9 +80,9 @@
 		F572A6D01C39269900BA6418 /* WatchDataTransfer WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchDataTransfer WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F572A6D51C39269900BA6418 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		F572A6D71C39269900BA6418 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		F572A6D91C39269900BA6418 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		F572A6DB1C39269900BA6418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F572A6DD1C39269900BA6418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F572A6EC1C39280800BA6418 /* RandomData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +106,10 @@
 		F572A6A61C39269900BA6418 = {
 			isa = PBXGroup;
 			children = (
-				F572A6B11C39269900BA6418 /* WatchDataTransfer */,
-				F572A6C51C39269900BA6418 /* WatchDataTransfer WatchKit App */,
-				F572A6D41C39269900BA6418 /* WatchDataTransfer WatchKit Extension */,
+				F572A6EB1C3927EF00BA6418 /* Shared */,
+				F572A6B11C39269900BA6418 /* iPhone app */,
+				F572A6C51C39269900BA6418 /* WatchKit App */,
+				F572A6D41C39269900BA6418 /* WatchKit Extension */,
 				F572A6B01C39269900BA6418 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,39 +124,73 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F572A6B11C39269900BA6418 /* WatchDataTransfer */ = {
+		F572A6B11C39269900BA6418 /* iPhone app */ = {
 			isa = PBXGroup;
 			children = (
 				F572A6B21C39269900BA6418 /* AppDelegate.swift */,
 				F572A6B41C39269900BA6418 /* ViewController.swift */,
 				F572A6B61C39269900BA6418 /* Main.storyboard */,
-				F572A6B91C39269900BA6418 /* Assets.xcassets */,
-				F572A6BB1C39269900BA6418 /* LaunchScreen.storyboard */,
-				F572A6BE1C39269900BA6418 /* Info.plist */,
+				F5A6AEC21C3BC14900FE87E7 /* Other */,
 			);
+			name = "iPhone app";
 			path = WatchDataTransfer;
 			sourceTree = "<group>";
 		};
-		F572A6C51C39269900BA6418 /* WatchDataTransfer WatchKit App */ = {
+		F572A6C51C39269900BA6418 /* WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
 				F572A6C61C39269900BA6418 /* Interface.storyboard */,
-				F572A6C91C39269900BA6418 /* Assets.xcassets */,
-				F572A6CB1C39269900BA6418 /* Info.plist */,
+				F5A6AEC41C3BC15D00FE87E7 /* Other */,
 			);
+			name = "WatchKit App";
 			path = "WatchDataTransfer WatchKit App";
 			sourceTree = "<group>";
 		};
-		F572A6D41C39269900BA6418 /* WatchDataTransfer WatchKit Extension */ = {
+		F572A6D41C39269900BA6418 /* WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
 				F572A6D51C39269900BA6418 /* InterfaceController.swift */,
 				F572A6D71C39269900BA6418 /* ExtensionDelegate.swift */,
-				F572A6D91C39269900BA6418 /* GlanceController.swift */,
+				F5A6AEC31C3BC15400FE87E7 /* Other */,
+			);
+			name = "WatchKit Extension";
+			path = "WatchDataTransfer WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		F572A6EB1C3927EF00BA6418 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F572A6EC1C39280800BA6418 /* RandomData.swift */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		F5A6AEC21C3BC14900FE87E7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F572A6B91C39269900BA6418 /* Assets.xcassets */,
+				F572A6BB1C39269900BA6418 /* LaunchScreen.storyboard */,
+				F572A6BE1C39269900BA6418 /* Info.plist */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		F5A6AEC31C3BC15400FE87E7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
 				F572A6DB1C39269900BA6418 /* Assets.xcassets */,
 				F572A6DD1C39269900BA6418 /* Info.plist */,
 			);
-			path = "WatchDataTransfer WatchKit Extension";
+			name = Other;
+			sourceTree = "<group>";
+		};
+		F5A6AEC41C3BC15D00FE87E7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F572A6C91C39269900BA6418 /* Assets.xcassets */,
+				F572A6CB1C39269900BA6418 /* Info.plist */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,9 +261,11 @@
 				TargetAttributes = {
 					F572A6AE1C39269900BA6418 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = XJW89ZK9NM;
 					};
 					F572A6C01C39269900BA6418 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = XJW89ZK9NM;
 					};
 					F572A6CF1C39269900BA6418 = {
 						CreatedOnToolsVersion = 7.2;
@@ -289,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F572A6ED1C39280800BA6418 /* RandomData.swift in Sources */,
 				F572A6B51C39269900BA6418 /* ViewController.swift in Sources */,
 				F572A6B31C39269900BA6418 /* AppDelegate.swift in Sources */,
 			);
@@ -300,7 +339,7 @@
 			files = (
 				F572A6D81C39269900BA6418 /* ExtensionDelegate.swift in Sources */,
 				F572A6D61C39269900BA6418 /* InterfaceController.swift in Sources */,
-				F572A6DA1C39269900BA6418 /* GlanceController.swift in Sources */,
+				F572A6EE1C392E0300BA6418 /* RandomData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = WatchDataTransfer_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchDataTransfer WatchKit App/Info.plist";
@@ -478,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = WatchDataTransfer_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchDataTransfer WatchKit App/Info.plist";
@@ -494,10 +535,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WatchDataTransfer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eu.dign.WatchDataTransfer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -505,10 +549,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WatchDataTransfer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eu.dign.WatchDataTransfer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -531,6 +578,7 @@
 				F572A6E21C39269900BA6418 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F572A6E41C39269900BA6418 /* Build configuration list for PBXNativeTarget "WatchDataTransfer WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +587,7 @@
 				F572A6E61C39269900BA6418 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F572A6E81C39269900BA6418 /* Build configuration list for PBXNativeTarget "WatchDataTransfer" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +596,7 @@
 				F572A6EA1C39269900BA6418 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

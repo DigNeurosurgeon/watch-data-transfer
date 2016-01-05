@@ -8,24 +8,36 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var statusLabel: WKInterfaceLabel!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        statusLabel.setHidden(true)
+    }
+
+    @IBAction func onRandomDataButton() {        
+        statusLabel.setHidden(true)
+        let session = WCSession.defaultSession()
         
-        // Configure interface objects here.
-    }
+        if session.reachable {
+            let dataValues = ["data": RandomData.generateString(10)]
+            session.sendMessage(dataValues,
+                replyHandler: { reply in
+                    self.statusLabel.setHidden(false)
+                    self.statusLabel.setText(reply["status"] as? String)
+                }, errorHandler: { error in
+                    self.statusLabel.setText("Error: \(error)")
+            })
+        }
+        
 
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
     }
+    
 
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
 
 }
